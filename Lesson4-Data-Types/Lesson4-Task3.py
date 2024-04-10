@@ -5,8 +5,8 @@ number = 10
 print(number)
 
 # Acum cere user-ului să introducă un număr și atribuie acea valoare variabilei `number` și afișeaz-o folosind funcția `print
-number.input()
-print(number)
+number = input("enter number")
+print("you entered number: ", number)
 
 # Acum afișează tipul variabilei `number` folosind funcția `print`
 print(type(number))
