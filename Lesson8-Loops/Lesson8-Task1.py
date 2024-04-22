@@ -205,18 +205,26 @@ while i <= 5:
 # 1234
 # 12345
 
+number_lines = 5
+i = 1
 
-
+while i <= number_lines:
+    line = ""
+    j = number_lines
+    while j >= i:
+        line += str(j)
+        j -= 1
+    print(line)
+    i += 1
 # 54321
 # 5432
 # 543
 # 54
 # 5
 
-
-
-# Afișarea 3:
-
+alphabet = "abcdefg"
+for i in range(len(alphabet)):
+    print(alphabet[i:])
 # abcdefg
 # bcdefg
 # cdefg
@@ -226,9 +234,9 @@ while i <= 5:
 # g
 
 
-
-# Afișarea 4:
-
+for i in range(4):
+    print("+-+-+-+-+-+-+-+-")
+    print("-+-+-+-+-+-+-+-+")
 # +-+-+-+-+-+-+-+-
 # -+-+-+-+-+-+-+-+
 # +-+-+-+-+-+-+-+-
@@ -239,7 +247,9 @@ while i <= 5:
 # -+-+-+-+-+-+-+-+
 
 
-# Afișarea 5:
+# multiplicand = 3
+
+# for i in 
 
 # 3
 # 3 9
