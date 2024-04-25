@@ -246,10 +246,7 @@ for i in range(4):
 # +-+-+-+-+-+-+-+-
 # -+-+-+-+-+-+-+-+
 
-
-# multiplicand = 3
-
-# for i in 
+# no solution
 
 # 3
 # 3 9
