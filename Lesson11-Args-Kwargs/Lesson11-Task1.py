@@ -26,11 +26,12 @@ print(session.check_task_1(task_1))
 Task: Creați o funcție cu numele `task_2` care primește un număr variabil de argumente și returnează o listă cu argumentele care sunt numere întregi.
 Exemplu: task_2(1, 2, 'a', 'b') ➞ [1, 2]
 """
-
-# CODUL TĂU VINE MAI JOS:
-def task_2():
-    pass
-# CODUL TĂU VINE MAI SUS:
+def task_2(*args):
+    number_list = []
+    for number in args:
+        if isinstance(number, int):
+            number_list.append(number)
+    return number_list
 
 # VERIFICATION PROCESS
 print(session.check_task_2(task_2))
@@ -40,11 +41,11 @@ print(session.check_task_2(task_2))
 Task: Creați o funcție cu numele `task_3` care poate primi un număr variabil de argumente și va returna produsul acesora.
 Exemplu: task_3(1, 4, 5) ➞ 20
 """
-
-# CODUL TĂU VINE MAI JOS:
-def task_3():
-    pass
-# CODUL TĂU VINE MAI SUS:
+def task_3(*numbers):
+    product = 1
+    for number in numbers:
+        product = product * number
+    return product
 
 # VERIFICATION PROCESS
 print(session.check_task_3(task_3))
@@ -54,11 +55,15 @@ print(session.check_task_3(task_3))
 Task: Creați o funcție cu numele `task_4` care primește un număr arbitrar de perechi cheie-valoare și returnează un string care conține toate cheile și valorile concatenate separate de un spațiu.
 Exemplu: task_4(a=1, b=2, c=3) ➞ 'a 1 b 2 c 3'
 """
+def task_4(**kwargs):
+    result = ""
+    
+    for keys, values in kwargs.items():
+        result = result + f"{keys} {values} "
+    result = result[:-1]
+    return result
 
-# CODUL TĂU VINE MAI JOS:
-def task_4():
-    pass
-# CODUL TĂU VINE MAI SUS:
+print(task_4(a=1, b=2, c=3))
 
 # VERIFICATION PROCESS
 print(session.check_task_4(task_4))

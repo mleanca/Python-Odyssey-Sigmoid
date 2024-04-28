@@ -231,13 +231,39 @@ print(task_19(10))
 # Un număr perfect este un număr întreg pozitiv care este egal cu suma divizorilor săi, excluzând numărul însuși.
 # Exemplu: Pentru numărul 28 rezultatul va fi `True`, iar pentru numărul 10 rezultatul va fi `False`.
 def task_20(num):
-    pass
+    if num <= 1:
+        return False
+    
+    sum_of_divisors = 1
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            sum_of_divisors += i
+            if i * i != num:
+                sum_of_divisors += num // i
+    
+    return sum_of_divisors == num
+
+print(task_20(28))
+# True
 # print(session.check_task_20(task_20))
 
 # Task: Creați o funcție cu numele "task_21" care acceptă un număr și returnează `True` dacă numărul este un număr Armstrong, altfel `False`.
 # Un număr Armstrong este un număr care este egal cu suma puterilor sale de cifre.
 # Exemplu: Pentru numărul 153 rezultatul va fi `True`, iar pentru numărul 10 rezultatul va fi `False`.
-
+def task_21(number):
+    input_number = number
+    sum_of_digits = 0
+    number_of_digits = len(str(number))
+    
+    while number > 0:
+        digit = number % 10
+        sum_of_digits = sum_of_digits + digit**number_of_digits
+        number = number // 10
+    
+    return sum_of_digits == input_number
+    
+print(task_21(153))
+# True
 # print(session.check_task_21(task_21))
 
 # Task: Creați o funcție cu numele "task_22" care acceptă un număr și returnează `True` dacă numărul este un număr Harshad, altfel `False`.

@@ -246,8 +246,14 @@ for i in range(4):
 # +-+-+-+-+-+-+-+-
 # -+-+-+-+-+-+-+-+
 
-# no solution
+# no correct solution
+n = 3
 
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print(n, end=" ")
+    n = n * 3
+print()
 # 3
 # 3 9
 # 3 9 27
