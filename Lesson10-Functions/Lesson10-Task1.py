@@ -269,16 +269,51 @@ print(task_21(153))
 # Task: Creați o funcție cu numele "task_22" care acceptă un număr și returnează `True` dacă numărul este un număr Harshad, altfel `False`.
 # Un număr Harshad este un număr care este divizibil cu suma cifrelor sale.
 # Exemplu: Pentru numărul 18 rezultatul va fi `True`, iar pentru numărul 14 rezultatul va fi `False`.
+def task_22(number):
+    input_number = number
+    sum_of_digits = 0
+    
+    while number > 0:
+        digit = number % 10
+        sum_of_digits = sum_of_digits + digit
+        number = number // 10
+    
+    if input_number % sum_of_digits == 0:
+        return True
+    else:
+        return False
 
+print(task_22(18))
+# True
 # print(session.check_task_22(task_22))
 
 # Task: Creați o funcție cu numele "task_23" care primește ca argument un număr și returneaeză o listă cu primele n numere ale seriei Fibonacci.
 # Exemplu: Pentru numărul 5 rezultatul va fi [0, 1, 1, 2, 3]
+def task_23(number):
+    fibonacci_sequence = [0,1] #initializing the first two Fib numbers
+    
+    while len(fibonacci_sequence) < number: #continues the loop as long as the length of fibonacci_sequence is less than the input number
+        next_fib = fibonacci_sequence[-1] + fibonacci_sequence[-2] #calculates the sum of last two numbers in fibonacci_sequence
+        fibonacci_sequence.append(next_fib) #appending the calculated sum to the iteration of fibonacci_sequece list
+    
+    return fibonacci_sequence[:number] #slicing syntax to ensure the first 'number' elements are included in the fibonacci_sequence
 
+print(task_23(10))
+# [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 # print(session.check_task_23(task_23))
 
 # Task: Creați o funcție cu numele "task_24" care primește ca argument un număr și returnează o listă cu divizorii numărului respectiv.
 # Exemplu: Pentru numărul 10 rezultatul va fi [1, 2, 5, 10]
-
+def task_24(number):
+    divisors = []
+    input_number = number
+    
+    for divisor in range(1, input_number + 1):
+        if input_number % divisor == 0:
+            divisors.append(divisor)
+    return divisors
+    
+print(task_24(10))
+# [1, 2, 5, 10]
 # print(session.check_task_24(task_24))
 # print(session.get_completion_percentage())

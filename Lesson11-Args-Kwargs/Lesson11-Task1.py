@@ -63,8 +63,6 @@ def task_4(**kwargs):
     result = result[:-1]
     return result
 
-print(task_4(a=1, b=2, c=3))
-
 # VERIFICATION PROCESS
 print(session.check_task_4(task_4))
 # VERIFICATION PROCESS
@@ -78,8 +76,24 @@ Exemplu: task_6(3, 1, 2, a=10, b=20, c='a', d='b') ➞ [1, 2, 3], ['c', 'd']
 """
 
 # CODUL TĂU VINE MAI JOS:
-def task_5():
-    pass
+def task_5(*args, **kwargs):
+    str_list = []
+    int_list = []
+    
+    for arg in args:
+        if isinstance(arg, int):
+            int_list.append(arg)
+    
+    int_list.sort()
+    
+    for key, value in kwargs.items():
+        if isinstance(value, str):
+            str_list.append(key)
+    
+    str_list.sort()
+    
+    return int_list, str_list
+
 # CODUL TĂU VINE MAI SUS:
 
 # VERIFICATION PROCESS
