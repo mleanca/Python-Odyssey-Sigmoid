@@ -1,1 +1,1 @@
-This app is a sudoku solver
+This app is a sudoku solver.
