@@ -64,6 +64,7 @@ def solve_sudoku(grid):
         print('The provided puzzle is unsolvable.')
     return sudokugrid
 
+#sample puzzle
 puzzle = [
   [0, 0, 2, 0, 0, 8, 0, 0, 0],
   [0, 0, 0, 0, 0, 3, 7, 6, 2],
