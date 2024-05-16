@@ -1,5 +1,4 @@
-#Sudoku Solver
-
+#Sudoku Solver code
 class Grid:
     def __init__(self, grid):
         self.grid = grid

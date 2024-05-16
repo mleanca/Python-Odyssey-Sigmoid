@@ -34,8 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to solve Sudoku (implement your solver logic here)
     function solveSudoku(gridValues) {
-        // TO DO: Research Django, Streamlit, Flask or other frameworks
-        // How to implement here!
-        return gridValues;
+        return gridValues.join('');
     }
 });
