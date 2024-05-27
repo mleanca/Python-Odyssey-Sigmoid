@@ -1,0 +1,99 @@
+:root {
+    --color-gray: #303842;
+    --color-red: #be3143;
+    --color-white: #f0f0f0;
+}
+
+body {
+    background-color: var(--color-gray);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, p {
+    color: var(--color-white);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    margin-top: 20px;
+    border: 2px solid var(--color-gray);
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.cell input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Add borders for 3x3 subgrids */
+.cell:nth-child(3n) {
+    border-right: 2px solid var(--color-gray);
+}
+
+.cell:nth-child(3n+1) {
+    border-left: 2px solid var(--color-gray);
+}
+
+.grid-container > .cell:nth-child(-n+9) {
+    border-top: 2px solid var(--color-gray);
+}
+
+.grid-container > .cell:nth-last-child(-n+9) {
+    border-bottom: 2px solid var(--color-gray);
+}
+
+/* Remove internal borders for subgrid cells */
+.cell:nth-child(3n+1) {
+    border-left: 2px solid var(--color-gray);
+}
+
+.grid-container > .cell:nth-child(1),
+.grid-container > .cell:nth-child(2),
+.grid-container > .cell:nth-child(3),
+.grid-container > .cell:nth-child(10),
+.grid-container > .cell:nth-child(11),
+.grid-container > .cell:nth-child(12),
+.grid-container > .cell:nth-child(19),
+.grid-container > .cell:nth-child(20),
+.grid-container > .cell:nth-child(21) {
+    border-top: 2px solid var(--color-gray);
+}
+
+.grid-container > .cell:nth-child(19),
+.grid-container > .cell:nth-child(20),
+.grid-container > .cell:nth-child(21),
+.grid-container > .cell:nth-child(28),
+.grid-container > .cell:nth-child(29),
+.grid-container > .cell:nth-child(30),
+.grid-container > .cell:nth-child(37),
+.grid-container > .cell:nth-child(38),
+.grid-container > .cell:nth-child(39) {
+    border-bottom: 2px solid var(--color-gray);
+}
+
+button {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
